@@ -1,37 +1,8 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import "./app.css";
 
-const Image = ({ imgSource, alt }) => {
-  const ContainerDivRef = useRef();
-
-  return (
-    <div className="bw"
-      onMouseLeave={() => ContainerDivRef.current.className = "bw"}
-      onMouseEnter={() => ContainerDivRef.current.className = ""}
-      ref={ContainerDivRef}
-    >
-      <img src={imgSource} alt={alt} />
-    </div>
-  );
-};
-
-function App() {
-  const imgs = [
-    "https://picsum.photos/id/1011/367/267",
-    "https://picsum.photos/id/1022/367/267",
-  ];
-  
-  return (
-    <div className="app">
-      {imgs.map((img, i) => (
-        <Image
-          key={i}
-          imgSource={img}
-          alt={i}
-        />
-      ))}
-    </div>
-  );
+const App = () => {
+  return <div className="app">hi</div>;
 }
 
 export default App;
