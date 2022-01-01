@@ -1,0 +1,12 @@
+.navbar-container{
+    background-color: cornflowerblue;
+    color: white;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+.navbar-container div{
+    margin-right: auto;
+}
