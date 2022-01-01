@@ -1,0 +1,47 @@
+/* .calendar-container{
+    display: flex;
+    height: 90vh;
+}
+.hours-container{
+    height: 100%;
+    width: max-content;
+    border: 1px solid steelblue;
+    display: flex;
+    flex-direction: column;
+}
+.hours__list{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: end;
+    flex: 1;
+}
+.hours__list--hour{
+    border-bottom: 1px solid steelblue;
+    flex: 1;
+    padding-left: 1rem;
+}
+.hours__list--text{
+    font-size: 0.7rem;
+} */
+
+.calendar-container{
+    display: grid;
+    grid-template-columns: max-content repeat(7, 1fr);
+    grid-template-rows: max-content repeat(17, 1fr);
+    height: 90vh;
+}
+
+.hours__list--hour{
+    grid-column: 1;
+    text-align: end;
+}
+
+.day__header{
+    text-align: center;
+}
+.event{
+    background-color: violet;
+    border-radius: 8px;
+    padding: 3px;
+}
