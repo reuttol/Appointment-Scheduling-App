@@ -1,0 +1,15 @@
+.event{
+    border-radius: 8px;
+    padding: 5px;
+    padding-left: 8px;
+    cursor: pointer;
+}
+.yoga{
+    background-color: violet;
+}
+.pilates{
+    background-color: lightcoral;
+}
+.Kickboxing{
+    background-color: palevioletred;
+}

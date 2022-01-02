@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AppContext } from "../Context.js";
 import "./calendar.css";
 
+import Event from "../Event/Event";
+
 const Calendar = () => {
+  const context = useContext(AppContext);
+
   const daysOfWeek = [
+    "",
     "Sunday",
     "Monday",
     "Tuesday",
@@ -11,6 +17,7 @@ const Calendar = () => {
     "Friday",
     "Saturday",
   ];
+
   const renderHoures = () => {
     let arr = [];
     for (let i = 6; i < 23; i++) {
@@ -34,31 +41,22 @@ const Calendar = () => {
   };
 
   const renderDaysHeader = () => {
-    return daysOfWeek.map((day) => <div className="day__header">{day}</div>);
+    return daysOfWeek.map((day) => <div key={day} className="day__header">{day}</div>);
   };
   return (
     <div className="calendar-container">
-        <div></div>
       {renderDaysHeader()}
       {renderHoures()}
-      <div className="event">Yoga</div>
+      {context.events.map((event) => (
+        <Event
+          key={event.id}
+          event={event}
+          col={daysOfWeek.indexOf(event.day) + 1}
+          row={event.hour - context.startHour + 2}
+        />
+      ))}
     </div>
   );
-//   return (
-//     <div className="calendar-container">
-//       <div className="hours-container">
-//         <div className="day__header">5</div>
-//         <div className="hours__list">{renderHoures()}</div>
-//       </div>
-//       <Day />
-//       <Day />
-//       <Day />
-//       <Day />
-//       <Day />
-//       <Day />
-//       <Day />
-//     </div>
-//   );
 };
 
 export default Calendar;

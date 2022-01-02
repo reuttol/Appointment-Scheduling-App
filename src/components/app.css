@@ -11,6 +11,10 @@ body{
   height: 100vh;
   background-color: #ddd;
 }
+a{
+  text-decoration: none;
+  color: black;
+}
 /* #root, .app{
   height: 100%;
 } */

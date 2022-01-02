@@ -1,14 +1,14 @@
 import axios from "axios";
 
 const baseURL =  axios.create({
-    baseURL: "https://61c40cf8f1af4a0017d99240.mockapi.io/reut-avatar/shoes/"
+    baseURL: "https://61c40cf8f1af4a0017d99240.mockapi.io/reut-avatar/myGym/"
 })
 
 
 export default class api{
     static getItems = async () =>{
         const {data} =  await baseURL.get();
-        return data
+        return data;
     }
 
     static putItem = async (item) => {
