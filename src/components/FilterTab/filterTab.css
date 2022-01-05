@@ -1,0 +1,22 @@
+.filter-container {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 25px;
+    
+}
+.filter__header{
+    /* border-bottom: 1px solid #824176; */
+    padding-bottom: 5px;
+    color: #ADA9BB;
+}
+.filter-btns-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .checkbox-container {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    padding-top: 1rem;
+  }

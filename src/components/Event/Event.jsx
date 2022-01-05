@@ -9,11 +9,11 @@ const Event = ({ event: { instructor, id, name }, event, row, col }) => {
   
   return (
     <div
-      style={{ gridRow: `${parseInt(row)}`, gridColumn: `${parseInt(col)}` }}
+      style={{ gridRow: `${parseInt(row)} / span 1`, gridColumn: `${parseInt(col)} / span 1` }}
       className={`event ${name.toLowerCase()}`}
       onClick={() =>
         history.push({
-          pathname: `/${id}`,
+          pathname: `/events/${id}`,
           state: {
             event,
           },

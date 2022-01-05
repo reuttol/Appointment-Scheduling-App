@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
-import { AppContext } from "../Context.js";
+import FilterList from "../FilterList/FilterList";
+import "./mobileCalendar.css";
+import { AppContext } from "../Context";
 
-import FilterList from "../FilterList/FilterList.jsx";
-import "./calendar.css";
 
-const Calendar = () => {
+const MobileCalendar = ({ day }) => {
+    console.log("mobile calen", day);
   const context = useContext(AppContext);
-
   const renderHoures = () => {
     let arr = [];
     for (let i = 6; i < 23; i++) {
@@ -29,21 +29,23 @@ const Calendar = () => {
     return arr;
   };
 
-  const renderDaysHeader = () => {
-    return context.weekDays.map((day) => (
-      <div key={day} className="day__header">
-        {day}
-      </div>
-    ));
+  const filterEvents = () => {
+    console.log("before filter", context.events);
+    const t =  context.events.filter((event) => event.day === day);
+    console.log("mobile", t, day);
+    return t
   };
+  const hh = <FilterList events={filterEvents()} />
+  console.log(hh);
   return (
-    <div className="calendar-container">
+    <div className="mobile-calendar-container">
       <div></div>
-      {renderDaysHeader()}
+      <div className="day__header">{day}</div>
+      {/* {renderDaysHeader()} */}
       {renderHoures()}
-      <FilterList events={context.events}/>
+      {hh}
     </div>
   );
 };
 
-export default Calendar;
+export default MobileCalendar;

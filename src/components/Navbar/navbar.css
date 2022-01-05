@@ -1,11 +1,13 @@
 .navbar-container{
-    background-color: cornflowerblue;
+    background-color: var(--secondary-color);
     color: white;
     display: flex;
     gap: 1rem;
     justify-content: flex-end;
+    align-items: center;
     padding: 1rem;
     font-size: 1.5rem;
+    height: 7vh;
 }
 .navbar-container div{
     margin-right: auto;

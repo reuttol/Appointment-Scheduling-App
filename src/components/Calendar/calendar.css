@@ -28,9 +28,12 @@
 .calendar-container{
     display: grid;
     grid-template-columns: max-content repeat(7, 1fr);
-    grid-template-rows: max-content repeat(17, auto);
+    grid-template-rows: max-content repeat(17, 1fr);
     /* height: 90vh; */
     gap: 1rem;
+    border-radius: 5px;
+    border: 1px solid white;
+    padding: 3px;
 }
 
 .hours__list--hour{
@@ -40,4 +43,6 @@
 
 .day__header{
     text-align: center;
+    padding: 1.2rem;
+    border-bottom: 1px solid white;
 }

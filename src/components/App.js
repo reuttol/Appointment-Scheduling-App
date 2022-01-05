@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { AppProvider } from "./Context.js";
 
 import Navbar from "./Navbar/Navbar";
+import HomePage from "./HomePage/HomePage";
+import EventDetails from "./EventDetails/EventDetails";
+import Login from "./Login/Login";
 
-import api from "../api";
+// import api from "../api";
 import "./app.css";
-import Calendar from "./Calendar/Calendar";
-import EventDetails from "./EventDetails";
-import { AppProvider } from "./Context.js";
 
 const App = () => {
   useEffect(() => {}, []);
@@ -19,8 +20,13 @@ const App = () => {
         <BrowserRouter>
           <Navbar />
           <Switch>
-            <Route path="/" exact component={Calendar} />
-            <Route path="/:id" exact component={EventDetails} />
+            
+            <Route path="/login" exact component={Login} />
+            {/* /<Route exact path="/dashboard" component={Dashboard} /> */}
+            <Route path="/homepage" exact component={HomePage} />
+
+            <Route path="/events/:id" exact component={EventDetails} />
+            
             {/* <Route path="/:id" exact/>
               <EventDetails />
             <Route /> */}

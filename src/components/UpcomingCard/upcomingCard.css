@@ -1,0 +1,13 @@
+.upcoming-card{
+
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 5px;
+    color: var(--text-color-dark);
+}
+
+.upcoming-card__name{
+    font-size: 1.3rem;
+    border-bottom: 1px solid #000;
+    padding-bottom: 3px;
+}

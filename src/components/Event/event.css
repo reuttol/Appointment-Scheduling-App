@@ -3,13 +3,14 @@
     padding: 5px;
     padding-left: 8px;
     cursor: pointer;
+    color: var(--text-color-dark)
 }
 .yoga{
-    background-color: violet;
+    background-color: #F38168;
 }
 .pilates{
-    background-color: lightcoral;
+    background-color: #C45875;
 }
-.Kickboxing{
-    background-color: palevioletred;
+.kickboxing{
+    background-color: #FFBA5E;
 }
