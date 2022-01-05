@@ -10,7 +10,7 @@ const Navbar = () => {
   const handleLogout = () => {
   
     logout();
-    history.push('/login');
+    history.push('/');
   }
   return (
     <>
@@ -23,8 +23,8 @@ const Navbar = () => {
       {context.userData && (
         <nav className="navbar-container">
           <div>{`Welcome Back, ${context.userData.name.split(" ")[0]}`}</div>
-          <Link to="/login">Profile</Link>
-          <Link to="/login">Settings</Link>
+          <Link to="/">Profile</Link>
+          <Link to="/">Settings</Link>
           <a href="" onClick={handleLogout}>Sign out</a>
         </nav>
       )}

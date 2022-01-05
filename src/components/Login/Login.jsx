@@ -17,7 +17,7 @@ const Login = () => {
       return;
     }
     console.log("login", context.user);
-    if (context.user) history.replace("/homepage");
+    if (context.user) history.replace("/");
   }, [context.user, context.loading]);
 
   return (
