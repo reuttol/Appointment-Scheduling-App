@@ -46,8 +46,8 @@ const EventDetails = () => {
   const slots = () => {
     let notice = "";
     if (freeCapacity > 0)
-      notice = `Slots open for registration: ${freeCapacity}`;
-    else notice = "Sorry! There are no sots oppen for this class";
+      notice = `${freeCapacity} slots available `;
+    else notice = "Sorry! no slots available";
 
     return notice;
   };
@@ -55,36 +55,33 @@ const EventDetails = () => {
     <div className="details-page-container">
       <div className="details-container">
         <div className="field-container">
-          <div className="field__name">Course name:</div>
+          <div className="field__name">Course name</div>
           <div className="details">{eventDetails.name}</div>
         </div>
         <div className="field-container">
-          <div className="field__name">Instructor:</div>
+          <div className="field__name">Instructor</div>
           <div className="details">{eventDetails.instructor}</div>
         </div>
         <div className="field-container">
-          <div className="field__name">Date: </div>
+          <div className="field__name">Date</div>
           <div className="details">
-            <i className="fal fa-calendar-alt"></i>
             {getDate()}
           </div>
         </div>
         <div className="field-container">
-          <div className="field__name">Time: </div>
+          <div className="field__name">Time</div>
           <div className="details">
-            <i className="fas fa-clock"></i>
             {getHour()}
           </div>
         </div>
         <div className="field-container">
-          <div className="field__name">Place: </div>
+          <div className="field__name">Place</div>
           <div className="details">
-            <i className="fal fa-map-pin"></i>
             {`Studio #${eventDetails.hall}`}
           </div>
         </div>
         <div className="field-container">
-          <div className="field__name">Slots: </div>
+          <div className="field__name">Slots </div>
           <div className="details">{slots()}</div>
         </div>
 

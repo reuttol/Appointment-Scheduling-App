@@ -1,13 +1,9 @@
 import React, { useEffect, useState, useContext } from "react";
 import { Link, useHistory } from "react-router-dom";
-import img from '../../images/Logo-google-icon-PNG.png'
-
-import {
-  auth,
-  registerWithEmailAndPassword,
-  signInWithGoogle,
-} from "../../firebase";
+import {registerWithEmailAndPassword,signInWithGoogle} from "../../firebase";
 import { AppContext } from "../Context";
+
+import img from '../../images/Logo-google-icon-PNG.png'
 import "./register.css";
 
 

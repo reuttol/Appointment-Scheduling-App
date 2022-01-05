@@ -1,0 +1,13 @@
+.not-found-container{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 2rem;
+}
+.not-found-container :first-child{
+    font-size: 3rem;
+}
+#err-no{
+    font-size: 5rem;
+}

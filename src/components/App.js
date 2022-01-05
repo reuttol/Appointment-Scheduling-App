@@ -3,12 +3,12 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { AppProvider } from "./Context.js";
 
 import Navbar from "./Navbar/Navbar";
-import HomePage from "./HomePage/HomePage";
-import EventDetails from "./EventDetails/EventDetails";
 import Login from "./Login/Login";
 import Register from "./Register/Register.jsx";
+import HomePage from "./HomePage/HomePage";
+import EventDetails from "./EventDetails/EventDetails";
+import NotFound404 from "./NotFound404/NotFound404.js";
 
-// import api from "../api";
 import "./app.css";
 
 const App = () => {
@@ -20,20 +20,12 @@ const App = () => {
         {/* <Test /> */}
         <BrowserRouter>
           <Navbar />
-          <Switch>
-            
+          <Switch>   
             <Route path="/login" exact component={Login} />
-            {/* /<Route exact path="/dashboard" component={Dashboard} /> */}
             <Route path="/register" exact component={Register} />
             <Route path="/" exact component={HomePage} />
-
             <Route path="/events/:id" exact component={EventDetails} />
-            
-            {/* <Route path="/:id" exact/>
-              <EventDetails />
-            <Route /> */}
-            
-            {/* <Route component={NotFound404} /> */}
+            <Route component={NotFound404} />
           </Switch>
         </BrowserRouter>
       </AppProvider>
