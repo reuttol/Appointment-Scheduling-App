@@ -15,9 +15,8 @@ const FilterList = ({events}) => {
     console.log("use effect filter list  2");
   }, [context.filters, filtered]);
 
-  const filter = () => {
+  const filter = (temp) => {
     console.log("filter in filter list");
-    let temp = events;
 
     if(filtersObj.classes.length !==0){
       temp = temp.filter((event) => filtersObj.classes.includes(event.name) );
@@ -29,13 +28,13 @@ const FilterList = ({events}) => {
       temp = temp.filter((event) => filtersObj.days.includes(event.day) );
     }
 
-    setFiltered(temp);
+    return temp;
    
   };
   return (
     <>
     {console.log(filtered)}
-      {filtered.map((event) => (
+      {filter(events).map((event) => (
         
         <Event
           key={event.id}

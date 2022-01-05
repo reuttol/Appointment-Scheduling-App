@@ -6,6 +6,7 @@ import Navbar from "./Navbar/Navbar";
 import HomePage from "./HomePage/HomePage";
 import EventDetails from "./EventDetails/EventDetails";
 import Login from "./Login/Login";
+import Register from "./Register/Register.jsx";
 
 // import api from "../api";
 import "./app.css";
@@ -23,6 +24,7 @@ const App = () => {
             
             <Route path="/login" exact component={Login} />
             {/* /<Route exact path="/dashboard" component={Dashboard} /> */}
+            <Route path="/register" exact component={Register} />
             <Route path="/homepage" exact component={HomePage} />
 
             <Route path="/events/:id" exact component={EventDetails} />
