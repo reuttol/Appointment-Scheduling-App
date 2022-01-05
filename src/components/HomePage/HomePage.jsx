@@ -14,12 +14,9 @@ const HomePage = () => {
   const step = context.mobile ? 1 : 7;
   const [offset, setOffset] = useState(0)
   const [day, setDay] = useState(moment())
-  // const [eventData,setEventData ] = useState(0)
 
   useEffect(() => {
-    console.log("offset", "step", offset, step);
     const date = moment().add(offset, 'days');
-    console.log("date", date);
     setDay(date)
     const start = date.clone().startOf("week");
     const end = date.clone().endOf("week");

@@ -20,8 +20,7 @@ const auth = app.auth();
 const db = app.firestore();
 const googleProvider = new firebase.auth.GoogleAuthProvider();
 
-const test = async () => {
-  console.log("test");
+const setEventsToDB = async () => {
   const batch = db.batch();
   data.forEach((element, i) => {
     const elementRef = db.collection("events").doc(`${element.id}`);
@@ -30,7 +29,6 @@ const test = async () => {
   await batch.commit();
 };
 const getEvents = async (start, end) => {
-  console.log(start.format("DD/MM/YYYY"), end.format("DD/MM/YYYY"));
   const query = await db
     .collection("events")
     .where("date", "<=", end.format("DD-MM-YYYY"))
@@ -113,6 +111,6 @@ export {
   registerWithEmailAndPassword,
   sendPasswordResetEmail,
   logout,
-  test,
+  setEventsToDB,
   getEvents,
 };

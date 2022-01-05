@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Link, useHistory} from "react-router-dom";
 import { AppContext } from "../Context";
-import { logout, signInWithGoogle } from "../../firebase";
+import { logout } from "../../firebase";
 import "./navbar.css";
 
 const Navbar = () => {
@@ -25,7 +25,7 @@ const Navbar = () => {
           <div>{`Welcome Back, ${context.userData.name.split(" ")[0]}`}</div>
           <Link to="/">Profile</Link>
           <Link to="/">Settings</Link>
-          <a href="" onClick={handleLogout}>Sign out</a>
+          <a href="/" onClick={handleLogout}>Sign out</a>
         </nav>
       )}
     </>

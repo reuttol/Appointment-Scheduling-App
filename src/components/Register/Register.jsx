@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, useHistory } from "react-router-dom";
 import {
@@ -6,21 +6,25 @@ import {
   registerWithEmailAndPassword,
   signInWithGoogle,
 } from "../../firebase";
+import { AppContext } from "../Context";
 import "./register.css";
+
+
 function Register() {
+  const context = useContext(AppContext);
+  const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
-  const [user, loading, error] = useAuthState(auth);
-  const history = useHistory();
-  const register = () => {
+  
+const register = () => {
     if (!name) alert("Please enter name");
     registerWithEmailAndPassword(name, email, password);
   };
   useEffect(() => {
-    if (loading) return;
-    if (user) history.replace("/");
-  }, [user, loading]);
+    if (context.loading) return;
+    if (context.user) history.replace("/");
+  }, [context.user, context.loading]);
   return (
     <div className="register">
       <div className="register__container">
