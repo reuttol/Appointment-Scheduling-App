@@ -1,8 +1,7 @@
 import React, { createContext, useState, useEffect } from "react";
-// import api from "../api";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { db, auth, test, getEvents } from "../firebase";
-import { useHistory } from "react-router-dom";
+import { useMediaQuery } from 'react-responsive';
 import moment from "moment";
 
 export const AppContext = createContext();
@@ -18,7 +17,7 @@ export const AppProvider = (props) => {
   const [user, loading, error] = useAuthState(auth);
   const [active, setActive] = useState(1);
   const [userData, setUserData] = useState(null);
-  const [mobile, SetMobile] = useState(true);
+  const [mobile, SetMobile] = useState(useMediaQuery({ query: `(max-width: 600px)` }));
   const [startWeek, setStartWeek] = useState(moment().clone().add(7, 'days').startOf("week"));
   const [endWeek, setEndWeek] = useState(moment().clone().add(7, 'days').endOf("week"));
   const [classes, setClasses] = useState(["Yoga", "Pilates", "Kickboxing"]);

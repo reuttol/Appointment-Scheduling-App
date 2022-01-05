@@ -1,22 +1,16 @@
-import React, { useState, useEffect, useContext} from "react";
+import React, { useEffect, useContext} from "react";
 import { AppContext } from "../Context.js";
 
 import Event from "../Event/Event.jsx";
 
 const FilterList = ({events}) => {
   const context = useContext(AppContext);
-  const [filtered, setFiltered] = useState(events);
   const filtersObj = context.filters;
 
   useEffect(() => {
-    console.log("use effect filter list");
-    filter();
-
-    console.log("use effect filter list  2");
-  }, [context.filters, filtered]);
+  }, [context.filters]);
 
   const filter = (temp) => {
-    console.log("filter in filter list");
 
     if(filtersObj.classes.length !==0){
       temp = temp.filter((event) => filtersObj.classes.includes(event.name) );
@@ -33,7 +27,6 @@ const FilterList = ({events}) => {
   };
   return (
     <>
-    {console.log(filtered)}
       {filter(events).map((event) => (
         
         <Event
