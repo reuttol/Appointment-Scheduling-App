@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
-import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, useHistory } from "react-router-dom";
+import img from '../../images/Logo-google-icon-PNG.png'
+
 import {
   auth,
   registerWithEmailAndPassword,
@@ -16,7 +17,7 @@ function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
-  
+
 const register = () => {
     if (!name) alert("Please enter name");
     registerWithEmailAndPassword(name, email, password);
@@ -56,7 +57,7 @@ const register = () => {
           className="register__btn register__google"
           onClick={signInWithGoogle}
         >
-          Register with Google
+          <img src={img} alt="google-icon"/> Register with Google
         </button>
         <div className="links">
           Already have an account? <Link to="/login">Login</Link> now

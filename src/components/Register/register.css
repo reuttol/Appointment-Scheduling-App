@@ -15,20 +15,22 @@
 }
 .register__textBox {
   padding: 1rem;
-    font-size: 2rem;
-    margin-bottom: 1rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 .register__btn {
   cursor: pointer;
-    padding: 1rem;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    border: none;
-    color: white;
-    background-color: var(--secondary-color);
+  padding: 1rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border: none;
+  color: white;
+  background-color: var(--secondary-color);
 }
 .register__google {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
   cursor: pointer;
-  /* background: linear-gradient(180deg, #888 0%, #363062 50%, #888 100%); */
-  background-color: #4885ed;
+  background-color: #666;
 }

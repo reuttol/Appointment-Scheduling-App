@@ -15,12 +15,18 @@
     gap: 2rem;
     width: fit-content;
 }
-.details-container div{
+.field__name{
+    
+}
+.details{
     background-color: #dcdcdc;
     border-radius: 5px;
     width: 100%;
     padding: 5px 10px;
     color: var(--text-color-dark);
+}
+.field-container{
+    display: flex;
 }
 #details-btns-container{
     display: flex;

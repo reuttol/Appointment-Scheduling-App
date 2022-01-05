@@ -28,8 +28,11 @@
     background-color: var(--secondary-color);
   }
   .login__google {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
     cursor: pointer;
-    background-color: #4885ed;
+    background-color: #666;
     /* background: linear-gradient(180deg, #888 0%, #363062 50%, #888 100%); */
   }
 .links{
@@ -39,4 +42,9 @@
   }
   .links:hover{
       text-decoration: underline;
+  }
+  img{
+    height: 2.5rem;
+    width: 2.5rem;
+
   }

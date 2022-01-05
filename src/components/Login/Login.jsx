@@ -3,6 +3,7 @@ import { Link, useHistory } from "react-router-dom";
 import { signInWithEmailAndPassword, signInWithGoogle } from "../../firebase";
 import { AppContext } from "../Context";
 import "./login.css";
+import img from '../../images/Logo-google-icon-PNG.png'
 
 const Login = () => {
   const context = useContext(AppContext);
@@ -40,8 +41,9 @@ const Login = () => {
         >
           Login
         </button>
+        
         <button className="login__btn login__google" onClick={signInWithGoogle}>
-          Login with Google
+        <img src={img} alt="google-icon"/>  Login with Google
         </button>
         <div className="links">
           <Link to="/reset">Forgot Password</Link>
