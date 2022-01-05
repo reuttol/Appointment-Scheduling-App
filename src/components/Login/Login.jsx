@@ -8,15 +8,12 @@ const Login = () => {
   const context = useContext(AppContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  //   const [user, loading, error] = useAuthState(auth);
   const history = useHistory();
 
   useEffect(() => {
     if (context.loading) {
-      // maybe trigger a loading screen
       return;
     }
-    console.log("login", context.user);
     if (context.user) history.replace("/");
   }, [context.user, context.loading]);
 

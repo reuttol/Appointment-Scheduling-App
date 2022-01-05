@@ -14,11 +14,7 @@ const EventDetails = () => {
   const [canEnroll, setCanEnroll] = useState(true);
 
   useEffect(() => {
-    console.log("ths user:",context.userData);
-    console.log("the event", eventDetails);
-    console.log(eventDetails.enrolled);
     const i = eventDetails.enrolled.findIndex(id=> id=== context.userData.uid);
-    console.log(i);
     if (i !== -1) setIsEnrolled(true);
     setCanEnroll(freeCapacity > 0);
   }, [isEnrolled, freeCapacity]);

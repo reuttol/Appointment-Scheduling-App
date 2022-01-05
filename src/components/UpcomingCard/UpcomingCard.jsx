@@ -3,7 +3,6 @@ import moment from "moment";
 import "./upcomingCard.css";
 
 const UpcomingCard = ({ event }) => {
-  console.log(event);
   const getHour = () => {
     const hour = parseInt(event.hour);
 

@@ -17,7 +17,7 @@ const Navbar = () => {
       {!context.userData && (
         <nav className="navbar-container">
           <Link to="/register">Sign Up</Link>
-          <Link  onClick={signInWithGoogle} to="/login">Sign In</Link>
+          <Link   to="/login">Sign In</Link>
         </nav>
       )}
       {context.userData && (

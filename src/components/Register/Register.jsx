@@ -19,7 +19,7 @@ function Register() {
   };
   useEffect(() => {
     if (loading) return;
-    if (user) history.replace("/homepage");
+    if (user) history.replace("/");
   }, [user, loading]);
   return (
     <div className="register">
@@ -54,8 +54,8 @@ function Register() {
         >
           Register with Google
         </button>
-        <div>
-          Already have an account? <Link to="/login">Login</Link> now.
+        <div className="links">
+          Already have an account? <Link to="/login">Login</Link> now
         </div>
       </div>
     </div>
