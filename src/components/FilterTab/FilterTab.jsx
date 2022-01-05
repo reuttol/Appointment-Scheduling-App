@@ -8,7 +8,7 @@ const FilterTab = () => {
 
   const renderFilterList = (list, filterName) => {
     return list.map((item) => (
-      <div key={item} className="checkbox-container">
+      <div key={item} className={`checkbox-container ${item}`}>
         <input
           type="checkbox"
           onChange={(e) => toggleFilter(e)}
@@ -27,9 +27,6 @@ const FilterTab = () => {
     if (e.target.checked) {
       tempFilters[name].push(value);
     } else {
-      // const index = tempFilters[name].indexOf(value);
-      // if(index !== -1)
-      // tempFilters[name].splice(index, 1);
       const newArr = tempFilters[name].filter((e) => e !== value);
       tempFilters[name] = newArr;
     }
@@ -49,9 +46,9 @@ const FilterTab = () => {
           {renderFilterList(context.teachers, "teachers")}
         </div>
       </div>
-      <div className="filter-container">
+      <div className="filter-container" >
         <h3 className="filter__header">Weekday</h3>
-        <div className="filter-btns-container">
+        <div className="filter-btns-container" id="weekdays">
           {renderFilterList(context.weekDays, "days")}
         </div>
       </div>
