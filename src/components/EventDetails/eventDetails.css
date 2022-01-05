@@ -47,6 +47,5 @@
     color: var(--text-color-white);
     border: none;
     text-align: center;
-    /* position: relative; */
     border: 2px solid var(--secondary-color);
 }
