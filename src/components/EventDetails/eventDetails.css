@@ -13,6 +13,7 @@
     padding: 2rem;
     gap: 1rem;
     width: 30%;
+    min-width: fit-content;
 }
 .field__name{
     min-width: fit-content;

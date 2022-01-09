@@ -21,7 +21,7 @@ export const data = [
   {id: 20,name: "Kickboxing",day: "Friday", instructor: "James Doe", date: "07-01-2022", hour: "13", capacity: 10,enrolled: [], hall: 1 },
   {id: 21,name: "Kickboxing",day: "Friday", instructor: "James Doe", date: "07-01-2022", hour: "14", capacity: 10,enrolled: [], hall: 1 },
   {id: 22,name: "Kickboxing",day: "Friday", instructor: "James Doe", date: "07-01-2022", hour: "15", capacity: 10,enrolled: [], hall: 1 },
-  {id: 23,name: "yoga",day: "Sunday", instructor: "James Doe", date: "09-01-2022", hour: "6", capacity: 10,enrolled: [], hall: 1 },
+  {id: 23,name: "Yoga",day: "Sunday", instructor: "James Doe", date: "09-01-2022", hour: "6", capacity: 10,enrolled: [], hall: 1 },
   {id: 24,name: "Kickboxing",day: "Monday", instructor: "James Doe", date: "10-01-2022", hour: "8", capacity: 10,enrolled: [], hall: 1 },
 //   { name: "Aerobics", instructor: "Jonny Smith", date: "", hour: "", capacity: 10, hall: 1 },
 //   { name: "Aerobics", instructor: "Jonny Smith", date: "", hour: "", capacity: 10, hall: 1 },
