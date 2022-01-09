@@ -95,13 +95,12 @@ export const AppProvider = (props) => {
     const eventIndex = events.indexOf(event);
     const temp = [...events];
     const userIndex = temp[eventIndex].enrolled.indexOf(userData.uid);
-
-    const tempClasses = userData.classes.filter((cls) => cls.id !== event.id)
-    const newUserData = {...userData, classes: tempClasses}
-    setUserData(newUserData);
-
     temp[eventIndex].enrolled.splice(userIndex, 1);
     setEvents(temp);
+
+    const tempClasses = userData.classes.filter((cls) => cls !== event.id)
+    const newUserData = {...userData, classes: tempClasses}
+    setUserData(newUserData);
 
     db.collection("users")
       .doc(`${userData.uid}`)
