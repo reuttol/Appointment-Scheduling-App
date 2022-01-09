@@ -96,13 +96,17 @@ export const AppProvider = (props) => {
     const temp = [...events];
     const userIndex = temp[eventIndex].enrolled.indexOf(userData.uid);
 
+    const tempClasses = userData.classes.filter((cls) => cls.id !== event.id)
+    const newUserData = {...userData, classes: tempClasses}
+    setUserData(newUserData);
+
     temp[eventIndex].enrolled.splice(userIndex, 1);
     setEvents(temp);
 
     db.collection("users")
       .doc(`${userData.uid}`)
       .update({
-        classes: [...temp[eventIndex].enrolled],
+        classes: [...tempClasses],
       });
 
     db.collection("events")
